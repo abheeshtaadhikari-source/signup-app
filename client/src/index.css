@@ -1,0 +1,127 @@
+:root {
+  --blue: #7cbcef;
+  --blue-hover: #5fa9e3;
+  --text: #222;
+  --muted: #555;
+  --line: #888;
+  --error: #c0392b;
+  --success: #2e7d32;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: 'Raleway', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.auth {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 400;
+  font-size: 3.2rem;
+  margin: 0 0 12px;
+}
+
+.switch {
+  margin: 0 0 56px;
+}
+
+.link {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.link:hover { text-decoration: underline; }
+
+.link:focus-visible,
+.submit:focus-visible,
+.field input:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+form { text-align: left; }
+
+.field {
+  display: block;
+  margin-bottom: 36px;
+}
+
+.field span {
+  display: block;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.field input {
+  display: block;
+  width: 100%;
+  padding: 6px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  outline: none;
+}
+
+.field input:focus {
+  border-bottom-color: var(--blue);
+  box-shadow: 0 1px 0 var(--blue);
+}
+
+.status {
+  min-height: 1.5em;
+  margin: 0 0 12px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.status.error { color: var(--error); }
+.status.success { color: var(--success); }
+
+.submit {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  border: 0;
+  border-radius: 0;
+  background: var(--blue);
+  color: #fff;
+  font: inherit;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.submit:hover:not(:disabled) { background: var(--blue-hover); }
+.submit:disabled { opacity: 0.7; cursor: wait; }
+
+@media (max-width: 480px) {
+  h1 { font-size: 2.4rem; }
+  .switch { margin-bottom: 40px; }
+}
