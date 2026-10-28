@@ -1,3 +1,7 @@
+## Demo Video
+
+https://github.com/user-attachments/assets/7c18ecc1-1077-434d-8fc6-dcce1f253286
+
 # Sign-Up App – React, Express, REST API, MongoDB
 
 ```
